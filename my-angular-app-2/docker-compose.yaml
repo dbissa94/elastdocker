@@ -1,0 +1,8 @@
+version: '3.8'  # Specify Docker Compose version
+
+services:
+  angular-app:
+    build: ../my-angular-app  # Build from the current directory, where the Dockerfile is located
+    ports:
+      - "8080:80"  # Map port 8080 on the host to port 80 on the container
+    restart: always  # Always restart the container if it stops
